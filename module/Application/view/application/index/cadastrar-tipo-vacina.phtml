@@ -1,0 +1,19 @@
+<h3>Cadastrar um Tipo para Vacina</h3>
+  <form method="post">
+      Informe o nome do tipo da vacina..: 
+      <br>
+      <input type="text" name="nome">
+      <br><br>
+      Vacina..: 
+      <select name="id-vacina">
+       <?php foreach ($this->lista as $v): ?>
+      <option  value="<?php echo $v->vacinaId; ?>">
+          <?php echo $v->nome; ?>
+      </option>
+      <?php endforeach; ?>
+      </select>
+      <br><br>
+      <input type="submit" value="Adicionar">
+  </form>
+  <br><br>
+  <?php echo $this->resp; ?>

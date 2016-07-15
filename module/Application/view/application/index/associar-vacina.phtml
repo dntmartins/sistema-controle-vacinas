@@ -1,0 +1,24 @@
+<h3>Associar Vacina ao Paciente</h3>
+  <form method="post">
+     Usuario..: 
+      <select name="id-usuario">
+       <?php foreach ($this->usuarios as $u): ?>
+      <option  value="<?php echo $u->usuarioId; ?>">
+          <?php echo $u->nome; ?>
+      </option>
+      <?php endforeach; ?>
+      </select>
+      <br><br>
+      Vacina..: 
+      <select name="id-vacina">
+       <?php foreach ($this->vacinas as $v): ?>
+      <option  value="<?php echo $v->vacinaId; ?>">
+          <?php echo $v->nome; ?>
+      </option>
+      <?php endforeach; ?>
+      </select>
+      <br><br>
+      <input type="submit" value="Associar">
+  </form>
+  <br><br>
+  <?php echo $this->resp; ?>

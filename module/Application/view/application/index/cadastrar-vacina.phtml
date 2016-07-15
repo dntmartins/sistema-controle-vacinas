@@ -1,0 +1,23 @@
+<h3>Adicionar Vacina</h3>
+  <form method="post">
+      Informe o nome da vacina..: 
+      <br>
+      <input type="text" name="nome">
+      <br><br>
+      Informe a validade..: 
+      <br>
+      <input type="text" name="validade">
+      <br><br>
+      Doenca..: 
+      <select name="id-doenca">
+       <?php foreach ($this->lista as $d): ?>
+      <option  value="<?php echo $d->doencaId; ?>">
+          <?php echo $d->nome; ?>
+      </option>
+      <?php endforeach; ?>
+      </select>
+      <br><br>
+      <input type="submit" value="Adicionar">
+  </form>
+  <br><br>
+  <?php echo $this->resp; ?>
